@@ -2,8 +2,13 @@ class School
 
   attr_accessor :roster, :name
 
-  def initialize(name)
+  # def roster
+  #   @roster
+  # end
+  
+  def initialize(school_name)
     @roster = {}
+    @name = school_name
   end
 
   def add_student(student_name, grade)
@@ -23,6 +28,10 @@ class School
 
   def grade(num)
     roster[num]
+  end
+
+  def sort
+    @roster.each {|key, value| value.sort}
   end
 
 
