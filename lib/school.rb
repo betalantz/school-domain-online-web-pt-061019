@@ -14,8 +14,11 @@ class School
     # end
 
     # using or-equal operator
-    @roster[grade] ||= []
-    @roster[grade] << student_name
+    # @roster[grade] ||= []
+    # @roster[grade] << student_name
+
+    # using ternary
+    @roster[grade] ? @roster[grade] << student_name : @roster[grade] = [student_name]
 
   end
 end
