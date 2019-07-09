@@ -19,6 +19,11 @@ class School
 
     # using ternary
     @roster[grade] ? @roster[grade] << student_name : @roster[grade] = [student_name]
-
   end
+
+  def grade(num)
+    @roster[num]
+  end
+
+
 end
