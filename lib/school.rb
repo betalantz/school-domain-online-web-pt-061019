@@ -36,7 +36,7 @@ class School
 
     #non-destructive
     sorted_hash = {}
-    @roster.map {|k, v| sorted_hash[k] = v.sort}
+    @roster.map {|grade, names| sorted_hash[grade] = names.sort}
     sorted_hash
   end
 
