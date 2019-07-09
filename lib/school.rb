@@ -35,7 +35,9 @@ class School
     # @roster.each {|key, value| value.sort!}
 
     #non-destructive
-    @roster.map {|k, v| v.sort}
+    sorted_hash = {}
+    @roster.map {|k, v| sorted_hash[k] = v.sort}
+    sorted_hash
   end
 
 
