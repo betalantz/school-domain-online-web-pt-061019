@@ -31,6 +31,7 @@ class School
   end
 
   def sort
+    # destructive method
     @roster.each {|key, value| value.sort!}
   end
 
